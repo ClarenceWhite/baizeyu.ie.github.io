@@ -1,35 +1,60 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Add Map</title>
-    <link rel="stylesheet" href="style.css">
-    <script>
-      // Initialize and add the map
-      function initMap() {
-        // The location of Uluru
-        const dublin = { lat: 53.3449924849743,  lng: -6.267337446492698}; 
-        // The map, centered at Uluru
-        const map = new google.maps.Map(document.getElementById("map"), {
-          zoom: 14,
-          center: dublin,
-        });
-        // The marker, positioned at Uluru
-        const marker = new google.maps.Marker({
-          position: dublin,
-          map: map,
-        });
-      }
-    </script>
-  </head>
-  <body>
-    <h3>My Google Maps Demo</h3>
-    <!--The div element for the map -->
-    <div id="map"></div>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
 
-    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap&libraries=&v=weekly"
-      async
-    ></script>
-  </body>
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+</style>
+</head>
+<body>
+
+<h2 style="text-align:center">Hi there!</h2>
+
+<div class="card">
+  <img src="" style="width:100%">
+  <h1>Clarence 白泽宇</h1>
+  <p class="title">Potential CEO & Founder</p>
+  <p>University College Dublin</p>
+  <div style="margin: 24px 0;"> 
+    <a href="https://www.linkedin.com/in/zeyu-bai-966bb1175"><i class="fa fa-linkedin"></i></a>  
+    <a href="https://www.instagram.com/clarencewhite9807/"><i class="fa fa-instagram"></i></a> 
+  </div>
+  <p><button>Contact</button></p>
+</div>
+
+</body>
 </html>
